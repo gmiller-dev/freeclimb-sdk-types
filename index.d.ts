@@ -138,7 +138,7 @@ declare module '@freeclimb/sdk' {
 
     interface UpdateIncomingNumberOptions {
       applicationId?: string
-      alias: string
+      alias?: string
     }
     
     interface ListIncomingNumbersFilters {
@@ -225,7 +225,7 @@ declare module '@freeclimb/sdk' {
       ifMachineUrl?: string
       timeout?: number
       parentCallId?: string
-      privacyMode: boolean
+      privacyMode?: boolean
     }
 
     interface CallsClient {
@@ -275,9 +275,9 @@ declare module '@freeclimb/sdk' {
     interface CreateConferenceOptions {
       alias?: string
       playBeep?: "always" | "never" | "entryOnly" | "exitOnly"
-      record: boolean
-      waitUrl: string
-      statusCallbackUrl: string
+      record?: boolean
+      waitUrl?: string
+      statusCallbackUrl?: string
     }
 
     interface ConferencesClient {
@@ -617,7 +617,7 @@ declare module '@freeclimb/sdk' {
     }
 
     interface HangupOptions {
-      reason?: string
+      reason: string
     }
 
     interface OutDialCommand {
