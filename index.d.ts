@@ -17,7 +17,7 @@ declare module '@freeclimb/sdk' {
 
     interface Resource {
       uri: string
-      dateCreate: string
+      dateCreated: string
       dateUpdated: string
       revision: number
     }
