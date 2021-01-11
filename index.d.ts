@@ -151,7 +151,6 @@ declare module '@freeclimb/sdk' {
     }
 
     interface PurchaseIncomingNumberOptions {
-      phoneNumber: string
       alias?: string
       applicationId?: string
     }
@@ -161,7 +160,7 @@ declare module '@freeclimb/sdk' {
       update(incomingNumberId: string, options: UpdateIncomingNumberOptions): Promise<IncomingNumber>
       getList(filters?: ListIncomingNumbersFilters): Promise<IncomingNumbersPage>
       getNextPage(nextPageUri: string): Promise<IncomingNumbersPage>
-      purchase(accountId: string, options: PurchaseIncomingNumberOptions): Promise<IncomingNumber>
+      purchase(phoneNumber: string, options: PurchaseIncomingNumberOptions): Promise<IncomingNumber>
       delete(incomingNumberId: string): Promise<null>
     }
 
