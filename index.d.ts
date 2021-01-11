@@ -199,6 +199,7 @@ declare module '@freeclimb/sdk' {
       endTime: string
       connectDuration: number
       direction: string
+      duration: number
       answeredBy: string
       subResourceUris: {
         logs: string
