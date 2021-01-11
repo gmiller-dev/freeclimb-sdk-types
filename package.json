@@ -1,0 +1,10 @@
+{
+  "name": "freeclimb-sdk-types",
+  "version": "1.0.0",
+  "typings": "./index.d.ts",
+  "description": "Types for FreeClimb Node SDK",
+  "main": "index.js",
+  "repository": "https://github.com/gmiller-dev/freeclimb-sdk-types.git",
+  "author": "Geoff Miller <geoffrey.miller.dev@gmail.com>",
+  "license": "MIT"
+}
