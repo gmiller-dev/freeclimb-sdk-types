@@ -816,6 +816,7 @@ declare module '@freeclimb/sdk' {
       | PlayEarlyMediaCommand
       | RecordUtteranceCommand
       | RejectCommand
+      | RedirectCommand
       | RemoveFromConferenceCommand
       | SayCommand
       | SendDigitsCommand
@@ -828,29 +829,29 @@ declare module '@freeclimb/sdk' {
 
     // Builders
       interface Builders {
-      outdial(to: string, from: string, actionUrl: string, callConnectUrl: string, options?: OutDialCommandOptions): OutDialCommand
-      hangup(options?: HangupOptions): HangupCommand
-      pause(length: number): PauseCommand
-      redirect(actionUrl: string): RedirectCommand
-      sendDigits(digits: string, options?: SendDigitsOptions): SendDigitsCommand
-      createConference(actionUrl: string, options?: CreateConferenceOptions): CreateConferenceCommand
-      terminateConference(conferenceId: string): TerminateConferenceCommand
-      addToConference(conferenceId: string, callId: string, options?: AddToConferenceOptions): AddToConferenceCommand
-      removeFromConference(callId: string): RemoveFromConferenceCommand
-      setListen(callId: string, listen?: boolean): SetListenCommand
-      setTalk(callId: string, talk?: boolean): SetTalkCommand
-      enqueue(queueId: string, actionUrl: string, waitUrl: string, notificationUrl?: string): EnqueueCommand
-      dequeue(): DequeueCommand
-      recordUtterance(actionUrl: string, options?: RecordUtteranceOptions): RecordUtteranceCommand
-      startRecordCall(): StartRecordCallCommand
-      play(file: string, options?: PlayOptions):  PlayCommand
-      playEarlyMedia(file: string): PlayEarlyMediaCommand
-      say(text: string, options?: SayOptions): SayCommand
-      getDigits(actionUrl: string, options?: GetDigitsOptions): GetDigitsCommand
-      getSpeech(actionUrl: string, grammerFile: string, options?: GetSpeechOptions): GetSpeechCommand
-      sms(to: string, from: string, text: string, options?: SmsOptions): SmsCommand
-      reject(reason: string): RejectCommand
-      build(...scripts: Command[]): Command[]
+        outdial(to: string, from: string, actionUrl: string, callConnectUrl: string, options?: OutDialCommandOptions): OutDialCommand
+        hangup(options?: HangupOptions): HangupCommand
+        pause(length: number): PauseCommand
+        redirect(actionUrl: string): RedirectCommand
+        sendDigits(digits: string, options?: SendDigitsOptions): SendDigitsCommand
+        createConference(actionUrl: string, options?: CreateConferenceOptions): CreateConferenceCommand
+        terminateConference(conferenceId: string): TerminateConferenceCommand
+        addToConference(conferenceId: string, callId: string, options?: AddToConferenceOptions): AddToConferenceCommand
+        removeFromConference(callId: string): RemoveFromConferenceCommand
+        setListen(callId: string, listen?: boolean): SetListenCommand
+        setTalk(callId: string, talk?: boolean): SetTalkCommand
+        enqueue(queueId: string, actionUrl: string, waitUrl: string, notificationUrl?: string): EnqueueCommand
+        dequeue(): DequeueCommand
+        recordUtterance(actionUrl: string, options?: RecordUtteranceOptions): RecordUtteranceCommand
+        startRecordCall(): StartRecordCallCommand
+        play(file: string, options?: PlayOptions):  PlayCommand
+        playEarlyMedia(file: string): PlayEarlyMediaCommand
+        say(text: string, options?: SayOptions): SayCommand
+        getDigits(actionUrl: string, options?: GetDigitsOptions): GetDigitsCommand
+        getSpeech(actionUrl: string, grammerFile: string, options?: GetSpeechOptions): GetSpeechCommand
+        sms(to: string, from: string, text: string, options?: SmsOptions): SmsCommand
+        reject(reason: string): RejectCommand
+        build(...scripts: Command[]): Command[]
     }
   }
 
