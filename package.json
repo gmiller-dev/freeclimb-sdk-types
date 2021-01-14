@@ -1,6 +1,7 @@
 {
   "name": "freeclimb-sdk-types",
   "version": "1.0.9",
+  "main": "index.js",
   "typings": "./index.d.ts",
   "description": "Types for FreeClimb Node SDK",
   "repository": "https://github.com/gmiller-dev/freeclimb-sdk-types.git",
