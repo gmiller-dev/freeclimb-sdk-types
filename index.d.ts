@@ -497,7 +497,7 @@ declare module '@freeclimb/sdk' {
   namespace PerCL {
     // Commands 
     interface AddToConferenceCommand {
-      "AddToConferenceCommand": {
+      "AddToConference": {
         conferenceId: string
         callId: string
         startConfOnEnter?: boolean
