@@ -829,7 +829,7 @@ declare module '@freeclimb/sdk' {
 
     // Builders
       interface Builders {
-        outdial(to: string, from: string, actionUrl: string, callConnectUrl: string, options?: OutDialCommandOptions): OutDialCommand
+        outDial(to: string, from: string, actionUrl: string, callConnectUrl: string, options?: OutDialCommandOptions): OutDialCommand
         hangup(options?: HangupOptions): HangupCommand
         pause(length: number): PauseCommand
         redirect(actionUrl: string): RedirectCommand
