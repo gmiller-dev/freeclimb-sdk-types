@@ -284,7 +284,7 @@ declare module '@freeclimb/sdk' {
     interface ConferencesClient {
       get(conferenceId: string): Promise<Conference>
       update(conferenceId: string, object: UpdateConferenceOptions): Promise<Conference>
-      getList(filters: ListConferencesFilters): Promise<ConferencesPage>
+      getList(filters?: ListConferencesFilters): Promise<ConferencesPage>
       getNextPage(nextPageUri: string): Promise<ConferencesPage>
       create(options?: CreateConferenceOptions): Promise<Conference>
       participants(conferenceId: string): ConferenceParticipantsClient
