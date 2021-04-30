@@ -1043,7 +1043,7 @@ declare module '@freeclimb/sdk' {
     }
 
     interface EnumCollection {
-      langague: Language,
+      language: Language,
       callStatus: CallStatus
       ifMachine: IfMachine
       playBeep: PlayBeep
