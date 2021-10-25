@@ -21,7 +21,7 @@ declare module '@freeclimb/sdk' {
       dateUpdated: string
       revision: number
     }
-    
+
     interface Page {
       total: number
       start: number
@@ -71,7 +71,7 @@ declare module '@freeclimb/sdk' {
       statusCallbackUrl: string
       smsUrl: string
       smsFallbackUrl: string
-    }  
+    }
 
     interface ApplicationOptions {
       alias?: string
@@ -92,7 +92,7 @@ declare module '@freeclimb/sdk' {
     }
 
     interface ApplicationsClient {
-      get(applicationId: string): Promise<Application>  
+      get(applicationId: string): Promise<Application>
       update(applicationId: string, options: ApplicationOptions): Promise<Application>
       getList(filters?: ApplicationListFilters): Promise<ApplicationPage>
       getNextPage(nextPageUri: string): Promise<ApplicationPage>
@@ -134,13 +134,14 @@ declare module '@freeclimb/sdk' {
       country: string
       voiceEnabled: boolean
       smsEnabled: boolean
+      region: string
     }
 
     interface UpdateIncomingNumberOptions {
       applicationId?: string
       alias?: string
     }
-    
+
     interface ListIncomingNumbersFilters {
       phoneNumber?: string
       alias?: string
@@ -173,7 +174,7 @@ declare module '@freeclimb/sdk' {
     interface UpdateCallingNumberOptions {}
 
     interface ListCallingNumbersOptions {}
-    
+
     interface CreateCallingNumberOptions {}
 
     interface CallingNumbersClient {
@@ -663,7 +664,6 @@ declare module '@freeclimb/sdk' {
       loop?: number
       privacyMode?: boolean
     }
-        
     interface PlayEarlyMediaCommand {
       "PlayEarlyMedia": {
         file: string
@@ -803,9 +803,9 @@ declare module '@freeclimb/sdk' {
     type NestableCommand = PlayCommand | PauseCommand | SayCommand
 
     type Command =
-      AddToConferenceCommand 
-      | CreateConferenceCommand 
-      | DequeueCommand 
+      AddToConferenceCommand
+      | CreateConferenceCommand
+      | DequeueCommand
       | EnqueueCommand
       | GetDigitsCommand
       | GetSpeechCommand
